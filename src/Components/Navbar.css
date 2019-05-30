@@ -1,0 +1,340 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+    
+    }
+
+ nav{
+
+ }
+
+
+    nav ul li{
+        list-style: none;
+    }
+
+    nav ul li a{
+        display: block;
+       
+        color:rgb(209, 205, 205);
+        padding:15px 10px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out,padding 0.5s ease-in-out;
+    }
+
+    nav ul li a:hover{
+        display: block;
+       
+        color:rgb(221, 190, 11);
+        padding:15px 20px;
+        /* background: rgb(3, 80, 110); */
+    }
+
+    .fa-angle-down{
+        margin-left:0px;
+    }
+
+
+    .logoIm{
+        width:120px;
+        display: block;
+    }
+
+
+    .bar1,
+    .bar2,
+    .bar3{
+        width:30px;
+        height:3px;
+        background: rgb(199, 199, 199);
+        margin:4px;
+        transition: transform 1s ease;
+    }
+
+
+    .animateBar .bar1{
+        transform: rotate(-45deg) translate(-4px, 5px);
+        background: rgb(223, 220, 220);
+    }
+
+    .animateBar .bar2{
+        opacity:0;
+    }
+
+    .animateBar .bar3{
+       transform: rotate(45deg) translate(-5px ,-5px);
+       background: rgb(223, 220, 220);
+    }
+
+
+
+    button{
+        border: 1px solid rgb(175, 172, 172);
+        display: inline-block;
+        align-self: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        background: transparent;
+        
+    }
+
+    .button{
+       transform: rotate(360deg); 
+      
+     
+    }
+
+
+
+
+    .logoBtn{
+        display: flex;
+        justify-content: space-between;
+       
+        background: #043850;
+        padding:7px;
+        border-bottom:1px solid rgb(165, 165, 163);
+    }
+
+      section{
+         overflow:hidden;
+       height:90vh;  
+         transition: all 0.5s ease;
+          animation-name: example1;
+         animation-duration: 0.4s;
+      position: fixed;
+       width:100%; 
+       background: #043850;
+         left:-100%; 
+      }
+
+
+     .links{
+      
+         height: 60vh;
+           /* overflow:hidden; */
+       /* height:0;   */
+         /* transition: all 1s ease; */
+      /* position: fixed; */
+       /* width:100%;  */
+     
+      /* left:-100%;  */
+      
+      /* background: #043850; */
+     
+    }
+
+ .linksOpen{
+     
+        height: 90vh;
+         left:0%; 
+        position: fixed;
+       width:70%;
+       
+        
+      
+    }
+     
+
+
+
+
+
+
+
+     /* hide the submenu */
+    nav li ul.submenu{
+        display: none;
+        width:100%;
+         animation-name: example1;
+         animation-duration: 0.4s;
+        
+    }
+
+
+    @keyframes example1{
+        
+        from{
+            /* transform: scale(0); */
+        
+            transform: translateY(30px);
+           
+        }
+    
+        to{
+            /* transform: scale(1); */
+           
+            transform: translateY(0px);
+            
+        }
+    
+        }
+
+   
+
+    nav li:hover ul.submenu{
+        display: block;
+        
+    }
+
+    ul.submenu li {
+       list-style: none;
+       
+    }
+
+    ul.submenu li a{
+        background: #09435e;
+        padding:10px 10px;
+        
+    }
+
+    ul.submenu li a:hover{
+       
+        padding:10px 15px;
+        
+    }
+
+ 
+
+    @media screen and (min-width:576px){
+        .btn{
+            display: none;
+        }
+
+        .links{
+            display: flex !important;
+            justify-content: flex-end;
+            margin-right: 50px;
+            align-self: center;
+            overflow: visible;
+            height: auto;
+            position: relative;
+            /* right:30px; */
+            background: transparent;
+            
+        }
+
+        .linksOpen{
+            height:auto;
+            position: relative;
+            width: 100%;
+        }
+
+        section{
+         overflow:visible;
+       height:auto;  
+         transition: all 1s ease;
+       position: relative;
+       width:100%; 
+       left:0;
+      }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background: #043850;
+            align-items: center;
+            
+        }
+
+        .logoBtn{
+            border: 0px;
+        }
+
+        nav ul li a{
+            display: block;
+            background: transparent;
+            color:rgb(209, 205, 205);
+            padding:10px 20px;
+        
+           /* margin:1px 2px 1px 2px; border for horizontal dropdown*/ 
+            text-decoration: none;
+            transition: color 0.5s ease-in-out,padding 0.5s ease-in-out;
+        }
+    
+
+        nav ul li a:hover{
+            display: block;
+            padding:10px 20px;
+           
+        }
+
+
+        nav li{
+            position: relative;
+        }
+    
+        nav li .submenu{
+            position: absolute;
+            display: block;
+            
+                   /* create the animation */
+               
+                    
+       animation-name: example1;
+       animation-duration: 0.5s;
+       transition:all 2s ease-in-out;
+        }
+
+
+        @keyframes example1{
+        
+            from{
+                /* transform: scale(0); */
+               
+                transform: translateY(30px);
+               
+            }
+        
+            to{
+                /* transform: scale(1); */
+                
+                transform: translateY(0px);
+                
+            }
+        
+            }
+
+        nav li:hover .submenu{
+            display: block;
+            width: 150px;
+            padding-top:10px;
+
+      
+      
+         }
+
+
+
+
+
+         ul.submenu li {
+            list-style: none;
+           
+         }
+     
+         ul.submenu li a{
+            background: #043850;
+             padding:10px 15px;
+             
+         }
+
+         ul.submenu li a:hover{
+            background: #074968;
+            padding:10px 20px;
+            
+        }
+
+   .fa-angle-down{
+        margin-right:0;
+    }
+
+
+    }
