@@ -204,7 +204,7 @@ body{
  
 
     @media screen and (min-width:576px){
-        .btn{
+        button{
             display: none;
         }
 
